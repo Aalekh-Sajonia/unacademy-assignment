@@ -1,5 +1,11 @@
 console.log("hellow");
-const requestURL = 'http://localhost:3000/query';
+let requestURL = 'https://obscure-dawn-50603.herokuapp.com/query';
+
+if(location.protocol === 'https:') {
+  requestURL = 'https://obscure-dawn-50603.herokuapp.com/query';
+} else {
+  requestURL = 'http://obscure-dawn-50603.herokuapp.com/query';
+}
 
 let button = document.getElementById("queryBtn");
 let input = document.getElementById("secret");
