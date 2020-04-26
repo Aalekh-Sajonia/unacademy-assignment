@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron centered">
+  <div class="container">
+    <h1 class="display-3">Database</h1>
+  </div>
+  <form action="/submit" method="POST" onsubmit="return validateData()">
+    <div class="form-group">
+      <div>
+        <input type="text" id="secret" maxlength="140" name="secret" placeholder="Enter Here!!">
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="button-class">
+        <button type="submit" id="queryBtn" class="btn btn-outline-secondary btn-lg btn-block" role="button">Submit</button>
+      </div>
+    </div>
+  </form>
+  <p></p>
+  <p>Result</p>
+  <p id = "result"></p>
+</div>
+<script src="requester.js"></script>
+<%- include('partials/footer') %>
